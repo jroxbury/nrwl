@@ -1,0 +1,10 @@
+<div *ngIf="data$ | async as data; else loading">
+  <p><strong>Assignee:</strong> {{ data.name }}</p>
+  <p><strong>Id:</strong> {{ data.id }}</p>
+  <p><strong>Description:</strong> {{ data.description }}</p>
+  <p><strong>Assignee Id:</strong> {{ data.assigneeId }}</p>
+  <p><strong>Completed:</strong> {{ data.completed }}</p>
+  <a class="button" [routerLink]="['/dashboard']">Back</a>
+</div>
+
+<ng-template #loading> Loading... </ng-template>

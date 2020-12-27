@@ -1,0 +1,11 @@
+<h2>All Tickets</h2>
+
+<ng-container *ngIf="tickets$ | async as tickets; else loading">
+  <ul>
+    <li *ngFor="let t of tickets">
+      Ticket: {{ t.id }}, {{ t.description }}
+      <a [routerLink]="['/ticket-details/', t.id]">See more</a>
+    </li>
+  </ul>
+</ng-container>
+<ng-template #loading>Loading...</ng-template>

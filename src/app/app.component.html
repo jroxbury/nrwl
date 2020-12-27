@@ -1,7 +1,4 @@
-<h2>Tickets</h2>
-
-<ul>
-	<li *ngFor="let t of tickets|async">
-		Ticket: {{t.id}}, {{t.description}}
-	</li>
-</ul>
+<nav>
+  <a [routerLink]="['/add-ticket']">Add Ticket</a>
+</nav>
+<router-outlet></router-outlet>

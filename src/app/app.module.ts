@@ -1,18 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import {BackendService} from './backend.service';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { TicketDetailsModule } from "./ticket-details/ticket-details.module";
+import { DashboardModule } from "./dashboard/dashboard.module";
+import { AddTicketModule } from './add-ticket/add-ticket.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    DashboardModule,
+    TicketDetailsModule,
+    AddTicketModule,
   ],
-  providers: [BackendService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule {}
